@@ -285,7 +285,7 @@ function enviarEncuesta() {
     comentario: document.getElementById('f-comentario').value || '-'
   };
 
-  fetch('https://script.google.com/macros/s/AKfycbwEf7GzHOu-42IUVvZcFw0mtFM6JLszeGlW9rVlJsM2VJOuLxBAYE5dBKm4RznY0V7jHg/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbwT54DJEqAK2Rxns3YEQjxUNs4J_KsdxdYB_pwB3VaFmyUuJZ0mC7rsDCY2nn7Y9hYk8Q/exec', {
     method: 'POST', mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
