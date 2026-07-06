@@ -261,7 +261,7 @@
 
 <script>
 // ─── STATE ────────────────────────────────────────────────────────────────
-const ratings = { utilidad: null, agenda: null, duracion: null, bestpractices: null };
+const ratings = { utilidad: null, agenda: null, duracion: null, bestpractices: null, tour: null };
 
 // ─── BUILD SLIDERS ────────────────────────────────────────────────────────
 function buildSlider(trackId, key) {
@@ -294,7 +294,7 @@ function selectRating(key, val) {
 }
 
 function checkReady() {
-  const allRated = ratings.utilidad && ratings.agenda && ratings.duracion && ratings.bestpractices;
+  const allRated = ratings.utilidad && ratings.agenda && ratings.duracion && ratings.bestpractices && ratings.tour;
   document.getElementById('btn-enviar').disabled = !allRated;
 }
 
@@ -306,6 +306,7 @@ function enviarEncuesta() {
     agenda:         ratings.agenda,
     duracion:       ratings.duracion,
     bestpractices:  ratings.bestpractices,
+    tour:           ratings.tour,
     comentario: document.getElementById('f-comentario').value || '-'
   };
 
@@ -325,7 +326,7 @@ buildSlider('track-utilidad',      'utilidad');
 buildSlider('track-agenda',        'agenda');
 buildSlider('track-duracion',      'duracion');
 buildSlider('track-bestpractices', 'bestpractices');
-
+buildSlider('track-tour',          'tour');
 
 </script>
 </body>
